@@ -1,6 +1,7 @@
 package com.javatechie.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.javatechie.valiadtion.ValidPersonalNumber;
 import com.javatechie.valiadtion.ValidateEmployeeType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -31,4 +32,7 @@ public class Employee {
     //custom annotation
     @ValidateEmployeeType
     private String employeeType; //permanent or vendor or contractual
+
+    @ValidPersonalNumber
+    private String personalNumber;
 }
